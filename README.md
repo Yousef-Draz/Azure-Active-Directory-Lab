@@ -1,4 +1,4 @@
-My SOP to Building and Validating an Active Directory Lab in Azure
+## My SOP to Building and Validating an Active Directory Lab in Azure
 
 ## Overview
 
