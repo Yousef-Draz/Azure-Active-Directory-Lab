@@ -147,21 +147,18 @@ This SOP walks through building a fully functional Active Directory environment 
 - Enable auto-shutdown; review and create.
 
 ### 13. Configure DNS on the client VM [44:44](https://loom.com/share/c1c79b17ca5e4ec3bf6a210d0ad19f3e?t=2684)
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/22712893-c33e-4d7d-a49d-0abe7f0b3e36" />
 
 - Open **Network Connections → adapter's IPv4 properties**.
 - Change DNS from automatic to **manual**; set **Preferred DNS server** to the domain controller's static private IP.
 - **This step is required** — incorrect DNS is the most common cause of domain-join failure.
 
 ### 14. Join the client VM to the domain [47:37](https://loom.com/share/c1c79b17ca5e4ec3bf6a210d0ad19f3e?t=2857)
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/30702d45-c1d3-40ba-a4bf-b04dca31e11c" />
 
 - **System Properties → Change → Domain**, enter the domain name (e.g. `lab.local`).
 - Authenticate with domain controller credentials; confirm and restart.
 - After reboot, verify the machine shows as domain-joined.
 
 ### 15. Move the client computer object into the correct OU [49:37](https://loom.com/share/c1c79b17ca5e4ec3bf6a210d0ad19f3e?t=2977)
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/11df3561-83c8-4f13-983e-51bc990b2958" />
 
 - In ADUC, locate the client object in the default **Computers** container.
 - Move it into the correct OU (e.g. `Houston > Workstations`) — Group Policy won't apply correctly if it's left in the default container.
